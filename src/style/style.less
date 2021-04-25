@@ -1,19 +1,21 @@
 @import './palette.less';
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     
     body {
         font-family: "Montserrat";
 
         section {
-            margin-top: -1px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: -3px;
         }
     }
 
     .button {
         width: 376px;
         height: 67px;
-        background: linear-gradient(180deg, #BC012E 0%, #DA0034 100%);
+        background: @red;
         border-radius: 50px;
         border-color: @red;
         text-align: center;
@@ -74,7 +76,7 @@
 
         &-content {
             background-image: url('../assets/images/header-image-1.png');
-            height: 500px;
+            background-size: cover;
 
             .content-span {
                 display: flex;
@@ -106,21 +108,23 @@
                 &__description {
                     margin: 15px 0 43px;
                 }
+                .info-items {
+                    display: flex;
+                } 
 
                 &__os {
-                    margin-left: 69px;
-                    margin-top: 23px;
+                    margin-left: 70%;
+                    margin-top: 24%;
                 }
-            }
 
-            .content-bads {  
-                margin-top: -120px;
-                padding-left: 40%;
+                .content-bads {  
+                    width: 53%;
+                    margin: 19% 1% 2% 110px;
+                }
             }
         }
 
         &-info {
-            height: 610px;
             
             .info-discount {
                 height: 66px;
@@ -142,9 +146,10 @@
             .info-discount__center {
                 position: absolute;
                 text-align: center;
-                margin-left: 30%;
+                margin-left: 25%;
 
                 img {
+                    width: 100%;
                     margin-top: -80px;
                 }
 
@@ -176,9 +181,8 @@
                     align-items: center;
                     
                     img {
-                        margin-top: -5px;
-                        height: 43px;
-                        width: 43px;
+                        margin-top: -2%;
+                        width: 10%;
                     }
 
                     h3 {
@@ -200,7 +204,7 @@
             }
 
             .info-sale {
-                height: 300px;
+                height: 100%;
                 background-color: @lght-gray;
                 
                 .sale-title {
@@ -285,8 +289,7 @@
                     color: @black;
                     text-align: left;
                     text-transform: uppercase;
-                    padding-top: 26px;
-                    padding-bottom: 16px;
+                    padding: 26px 0 16px 10px;
                     margin: 0;
                 }
             }
@@ -295,18 +298,15 @@
 
     .sound {
         background-image: url('../assets/images/photo1.png');
-        background-repeat: no-repeat;
-        width: 100%;
+        background-size: contain;
 
-        h1 {
+        &-title {
             font-style: normal;
             font-weight: 600;
-            font-size: 33px;
+            font-size: 175%;
             line-height: 35px;
             text-transform: uppercase;
-            padding-top: 45px;
-            padding-left: 15%;
-            margin: 0;
+            padding: 8% 0 0px 12%;
 
             span {
                 font-weight: 800; 
@@ -314,8 +314,8 @@
         }
 
         .sound-button {
-            margin-top: 450px;
-            padding-bottom: 20px;
+            margin-top: 94%;
+            padding-bottom: 11%;
             display: flex;
             justify-content: center;
 
@@ -327,30 +327,29 @@
 
     .brand {
         background-image: url('../assets/images/photo2.png');
-        background-repeat: no-repeat;
-        width: 100%;
+        background-size: cover;
 
         &-title > h1 {
                 font-style: normal;
                 font-weight: 600;
-                font-size: 30px;
+                font-size: 175%;
                 line-height: 30px;
                 color: @black;
-                margin: 33px 0 0 30px;
+                margin: 5% 0 0 5%;
                 text-transform: uppercase;
         }
 
         &-description {
-            margin-top: 220px;
+            margin-top: 45%;
             text-align: center;
 
             h2 {
-                margin: 30px 0;
                 font-style: normal;
                 font-weight: 600;
-                font-size: 16px;
+                font-size: 95%;
                 line-height: 13px;
                 text-transform: uppercase;
+                margin: 7% 0 7% 0;
             }
         }
 
@@ -365,12 +364,13 @@
     .moisture {
         background-image: url('../assets/images/photo3.png');
         background-repeat: no-repeat;
+        background-size: cover;
         width: 100%;
 
         &-title {
             font-style: normal;
             font-weight: 600;
-            font-size: 28px;
+            font-size: 150%;
             line-height: 28px;
             color: @white;
             text-transform: uppercase;
@@ -378,12 +378,12 @@
         }
         
         &-description {
-            margin: 380px 0 0 30px;
+            margin: 80% 0 0 5%;
 
             h2 {
                 font-style: normal;
                 font-weight: bold;
-                font-size: 30px;
+                font-size: 150%;
                 line-height: 30px;
                 text-transform: uppercase;
                 color: @white;
@@ -400,15 +400,14 @@
         }
 
         &-info {
-            margin-top: 415px;
-            padding-bottom: 20px;
+            margin-top: 87%;
 
             &__top {
                 display: flex;
             }
 
             &__bottom {
-                margin-top: 15px;
+                margin-top: 3%;
                 display: flex;
             }
 
@@ -416,7 +415,7 @@
                 padding-left: 60px;
                 font-style: normal;
                 font-weight: normal;
-                font-size: 14px;
+                font-size: 100%;
                 line-height: 15px;
                 color: @beige;
             }
@@ -424,21 +423,21 @@
             h4 {
                 font-style: normal;
                 font-weight: normal;
-                font-size: 14px;
+                font-size: 100%;
                 line-height: 15px;
                 color: @white;
             }
 
             &__1, &__4 {
-                margin-left: 65px;
+                margin-left: 13%;
             }
 
             &__2, &__5 {
-                margin-left: 15px;
+                margin-left: 2.5%;
             }
 
             &__3, &__6 {
-                margin-left: 40px;
+                margin-left: 5%;
             }
         }
     }
@@ -446,29 +445,33 @@
     .noise {
         background-image: url('../assets/images/photo4.png');
         background-repeat: no-repeat;
-        height: 1000px;
+        background-size: cover;
 
         &-button {
             display: flex;
             justify-content: center;
-            padding-bottom: 10px;
+            padding: 1% 0;
+        }
+        
+        .button-2 {
+            padding: 3% 0 10% 0;
         }
 
         &-title {
-            padding-left: 60px;
+            text-align: center;
             font-style: normal;
             font-weight: bold;
-            font-size: 28px;
+            font-size: 175%;
             line-height: 28px;
             color: @white;
             text-transform: uppercase;
         }
 
         &-description {
-            margin-top: 700px;
+            margin: 150% 0 7% 0;
             font-style: normal;
             font-weight: normal;
-            font-size: 20px;
+            font-size: 125%;
             line-height: 22px;
             text-align: center;
             color: @white;
@@ -479,30 +482,32 @@
     .volume {
         background-image: url('../assets/images/photo5.png');
         background-repeat: no-repeat;
-        height: 670px;
 
         &-title {
             font-style: normal;
             font-weight: bold;
-            font-size: 30px;
+            font-size: 150%;
             line-height: 30px;
             text-transform: uppercase;
-            padding: 20px 0 0 30px;
+            text-align: center;
+            padding: 5% 0 129%;
+            margin: 0;
         }
     }
 
     .bluetooth {
         background-image: url('../assets/images/photo6.png');
         background-repeat: no-repeat;
-        height: 900px;
+        margin-top: -3%;
         text-align: center;
+        background-size: cover;
 
         &-title {
             font-style: normal;
             font-weight: 300;
-            font-size: 20px;
-            line-height: 23px;
-            padding-top: 85px;
+            font-size: 125%;
+            line-height: 125%;
+            padding-top: 17%;
 
             span {
                 font-weight: 600;
@@ -510,11 +515,11 @@
         }
 
         &-description {
-            margin-top: 680px;
+            padding: 140% 0 7% 0;
             font-style: normal;
             font-weight: 500;
-            font-size: 20px;
-            line-height: 20px;
+            font-size: 100%;
+            line-height: 100%;
 
             span {
                 font-size: 25px;
@@ -525,59 +530,92 @@
     .powerBank {
         background-image: url('../assets/images/photo7.png');
         background-repeat: no-repeat;
-        height: 845px;
+        margin-top: -3%;
+        background-color: @dark-blue;
 
         &-button, &-button__2 {
+            padding-top: 5%;
             display: flex;
             justify-content: center;
         }
         
         &-title {
             color: @white;
-            padding: 60px 0 0 30px;
+            padding: 8% 0 0 10%;
+            font-size: 150%;
+            line-height: 150%;
         }
 
         &-description {
             color: @white;
-            padding: 10px 0 0 30px;
+            font-size: 100%;
+            line-height: 100%;
+            padding-left: 10%;
         }
 
         &-button__2 {
-            padding-top: 410px;
+            padding-top: 85%;
         }
     }
 
     .battery {
+
         background-image: url('../assets/images/photo8.png');
         background-repeat: no-repeat;
-        height: 760px;
+        background-size: cover;
+        margin-top: -8%;
+
+        .battery-bac__1 {
+            background: url('../assets/images/arrow1.png');
+            background-repeat: no-repeat;
+            height: 100px;
+            position: relative;
+            bottom: -365px;
+            right: -46%;
+        }
+
+        .battery-bac__2 {
+            background: url('../assets/images/arrow2.png');
+            background-repeat: no-repeat;
+            height: 125px;
+            position: relative;
+            bottom: -380px;
+            right: -35%;
+        }
+
+        .battery-bac__3 {
+            background: url('../assets/images/arrow3.png');
+            background-repeat: no-repeat;
+            height: 165px;
+            position: relative;
+            bottom: -275px;
+            right: -3%;
+        }
 
         &-item {
-            padding-top: 315px;
             font-style: normal;
             font-weight: bold;
-            font-size: 20px;
-            line-height: 18px;
+            font-size: 120%;
+            line-height: 120%;
         }
 
         .item-1 {
-            text-align: right;
+            padding: 4% 0 0 15%;
         }
 
         .item-2 {
-            text-align: right;  
-            padding: 115px 60px 0;
+            padding: 18% 0 0 13%;
         }
 
         .item-3 {
-            text-align: left;
-            padding: 27px 0 0 20px;
+            padding: 25% 4%;
         }
 
         &-button {
             display: flex;
             justify-content: center;
-            padding-top: 30px;
+            padding-top: 65%;
+            padding-bottom: 15%;
         }
     }
 
@@ -585,8 +623,7 @@
         background-image: url('../assets/images/photo9.png');
         background-repeat: no-repeat;
         background-size: cover;
-        height: 845px;
-        width: 100%;
+        margin-top: -3px;
 
         &-title {
             text-align: center;
@@ -594,7 +631,7 @@
         }
 
         &-texts {
-            padding-top: 15%;
+            padding-top: 13%;
         }
 
         &-text {
@@ -605,15 +642,15 @@
         }
 
         .text-1 {
-            padding-left: 30%;
+            padding-left: 27%;
         }
 
         .text-2 {
-            padding-left: 65%;
+            padding-left: 70%;
         }
 
         .text-3 {
-            padding: 5% 0 0 70%;
+            padding: 5% 0 0 77%;
         }
 
         &-info {
@@ -621,8 +658,8 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 115.38%;
-            margin-top: 265px;
-            padding-left: 230px;
+            margin-top: 54%;
+            padding-left: 45%;
             text-transform: uppercase;
 
             span {
@@ -633,11 +670,12 @@
         &-button {
             display: flex;
             justify-content: center;
-            padding-top: 40px;
+            padding: 10% 0 25% 0;
         }
     }
 
     .review {
+
         &-title {
             text-align: center;
             padding-top: 10px;
@@ -672,12 +710,13 @@
                 font-style: normal;
                 font-weight: 300;
                 font-size: 20px;
-
                 padding: 20px 0 0 20px;
             }
         }
 
-
+        &-photo {
+            width: 100%;
+        }
     }
 
     .order {
@@ -691,7 +730,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            gap: 3% 3%;
+            gap: 22% 3%;
             padding: 3% 8%;
 
             .info-block {
@@ -701,8 +740,8 @@
                 justify-content: space-around;
                 align-content: flex-start;
                 align-items: center;
-                width: 200px;
-                height: 200px;
+                width: 100%;
+                height: 139%;
                 background-color: @red; 
                 border-radius: 20px;
                 
